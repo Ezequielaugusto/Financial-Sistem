@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dev.finance$</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Log Dev Finance" />
+    </header>
+    <main>
+      <section id="balance">
+        <h2 class="sr-only">Balance</h2>
+        <div class="card">
+          <h3>
+            <p>Income</p>
+            <img src="./assets/income.svg" alt="income" />
+          </h3>
+          <p>R$ 5.000,00</p>
+        </div>
+        <div class="card">
+          <h3>
+            <p>Expenses</p>
+
+            <img src="./assets/expense.svg" alt="Expense image." />
+          </h3>
+
+          <p>R$ 2.000,00</p>
+        </div>
+        <div class="card total">
+          <h3>
+            <p>Total</p>
+
+            <img src="./assets/total.svg" alt="Image Total" />
+          </h3>
+
+          <p>R$ 3.000,00</p>
+        </div>
+      </section>
+      <section id="transaction">
+        <h2 class="sr-only">Transações</h2>
+        <a href="#" 
+        onclick="Modal.open()" class="button new">+ New Transaction</a>
+
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Data</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="description">Water</td>
+              <td class="expense">R$ 200,00</td>
+              <td class="date">01/23/2021</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remove Transaction" />
+              </td>
+            </tr>
+            <tr>
+              <td class="description">Energy</td>
+              <td class="expense">R$ 200,00</td>
+              <td class="date">01/23/2021</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remove Transaction" />
+              </td>
+            </tr>
+            <tr>
+              <td class="description">Web Site Construction</td>
+              <td class="income">R$ 5.000</td>
+              <td class="date">01/23/2021</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remove Transaction" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <div class="modal-overlay active">
+      <div class="modal">
+        <div class="form">
+          <h2>New Transaction</h2>
+          <form action="">
+            <div class="input-group">
+              <label class="sr-only" for="description">Description</label>
+              <input 
+              type="text"
+              id="description"
+              name="description"
+              placeholder="description"
+              />
+              <div class="input-group">
+                <label class="sr-only"
+                 for="amount">Value</label>
+                <input 
+                type="number"
+                step="0.01"
+                id="amount" 
+                name="amount"
+                placeholder="0,00"
+            
+                />
+                <small class="help">Use the signal - (negative) for expenditures and , (comma) for decimal values.</small>
+            </div>
+            <div class="input-group">
+              <label class="sr-only"
+               for="date">Date</label>
+              <input 
+              type="text"
+              id="date"
+              name="date"
+              placeholder="Date"
+              />
+              
+              <div class="input-group actions">
+                <a href="#" class="button cancel">Cancel</a>
+                <button>Save</button>
+              </div>
+          </form>
+        </div>
+        <div class="modal-overlay"></div>
+      </div>
+    </div>
+    <footer>
+      <p>dev.finance$</p>
+    </footer>
+    <script>
+      src="script.js"
+    </script>
+  </body>
+</html>
