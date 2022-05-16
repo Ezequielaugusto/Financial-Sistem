@@ -1,2 +1,2 @@
 # Financial-Sistem
-This project was build for study purpuses , Rockeat Seat BootCamp. 
+This project was build for studing purpuses , Rockeat Seat BootCamp. 
